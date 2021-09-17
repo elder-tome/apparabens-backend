@@ -15,5 +15,5 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_PASSWORD: ${DEV_DATABASE_PASSWORD}
-      POSTGRES_DB: ${DEV_DATABASE}
+      POSTGRES_PASSWORD: eld41099
+      POSTGRES_DB: db_apparabens
