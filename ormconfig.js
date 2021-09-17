@@ -5,12 +5,10 @@ module.exports = {
   'synchronize': true,
   'logging': false,
   'entities': [
-    // process.env.NODE_ENV === 'production' ? 'build/models/**/*.js' : 'src/models/**/*.ts'
-    'build/models/**/*.js'
+    process.env.NODE_ENV === 'production' ? 'build/models/**/*.js' : 'src/models/**/*.ts'
   ],
   'migrations': [
-    // process.env.NODE_ENV === 'production' ? 'build/migration/**/*.js' : 'src/migration/**/*.ts'
-    'build/migration/**/*.js'
+    process.env.NODE_ENV === 'production' ? 'build/migration/**/*.js' : 'src/migration/**/*.ts'
   ],
   'cli': {
     'entitiesDir': 'src/models',
