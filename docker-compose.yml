@@ -8,13 +8,12 @@ services:
       - "3333:3333"
     volumes: 
       - .:/usr/app
-
+  
   db:
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
+    image: postgres
     restart: always
     ports:
-      - "3306:3306"
+      - "5432:5432"
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DATABASE}
